@@ -1,0 +1,43 @@
+/**
+* @file README
+* @Synopsis  User Instruction of this project
+* @author Ming Gu(guming02@baidu.com))
+* @version 1.0
+* @date 2015-09-17
+*/
+
+# Envrionment Requirement
+1.Tool Directory
+    1.1 Python
+        Validated with python 2.7
+    1.2 hadoop-client
+        Baidu modified hadoop client, validated with versoin Baidu-SOS Revision = hadoop-2-20140521194058
+    1.3 spark-client
+        Baidu modified version, valideted with version 1.2
+    1.4 mola
+        developped by liuyanhuang@baidu.com, wiki:http://wiki.baidu.com/display/VIDEORP/Mola
+    1.5 mysql
+        Validated with version Ver 14.12 Distrib 5.0.22
+
+2.Excutable in PATH
+    2.1 gsmsend
+        Tool to send message to related peaple, mostly used as urgent warning,
+        rely on the gsmsend command in system pass. Validated with version 1.1.2.0, except argument
+        format gsmsend 136********@msg
+    2.1 mail
+        Linux smtp server
+
+# Environment Configuartions
+1.Conf Directory
+    ./conf/EnvConfig CONF_PATH
+    Specify the absolute path of the conf directory. I didn't use python to auto-detect this path
+    because the conf directory will be packed into a zip file for the usage of spark-submit, which
+    will cause the auto-detected path to point to a .zip package rather than the origin directory
+2.Tool Directory
+    ./conf/EnvConfig TOOL_PATH
+    The absolute path the the mentioned tool directory.
+
+# Untouchable Files
+Some data, namely the tag list reviewed by PM, should not be altered unless you know what you
+are doing(and your boss and PM do too).
+    ./data/pm_reviewed_channels

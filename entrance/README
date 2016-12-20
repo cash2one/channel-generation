@@ -1,0 +1,9 @@
+This directory is the "official" entrance of this project
+Usage:
+1. generate long video tags
+python tags_gen.py works_type
+where works_type is one of {'movie', 'tv', 'comic', 'show'} without quotation marks
+
+2. generate/update video list of the tags of a certain long video type
+python tag_content_gen.py works_type
+where works_type share the meaning in 1
